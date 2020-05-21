@@ -16,9 +16,17 @@ const App = () => {
 
   return (
     <div className="App">
-      {sentences.map(sentence => (
-        <p>{sentence}</p>
-      ))}
+      <div className="search-form">
+        <form>
+          <input type="text"></input>
+          <input type="submit"></input>
+        </form>
+      </div>
+      <div className="search-results">
+        {sentences.map(sentence => (
+          <p>{sentence}</p>
+        ))}
+      </div>
     </div>
   );
 }
