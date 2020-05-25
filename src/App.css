@@ -10,22 +10,16 @@
 
 .search-form {
   position: relative;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 80%;
   height: 6%;
   border-radius: 8vh;
-  box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
   transform: translate(-50%, -50%);
   background: #fff;
   transition: all 0.3s ease;
   border: none;
-}
-
-.intro-title {
-  position: relative;
-  font-size: 1rem;
-  bottom: 70%;
 }
 
 .search-input {
@@ -57,7 +51,8 @@
 }
 
 .result {
-  position: relative;
+  position: absolute;
+  margin-top: 2rem;
   font-size: 1rem;
   top: 70%;
 }

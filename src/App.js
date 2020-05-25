@@ -28,22 +28,33 @@ const App = () => {
   }, []);
 
   const handleSubmit = e => {
+    console.log('handleSubmit called')
+    setSentence('')
     fetchDataPost()
     e.preventDefault();
+  };
 
-  }
+  const mouseEnterBorder = () => {
+    document.getElementById('search-form').style.boxShadow = '0.5rem 0.5rem 5rem rgba(0, 0, 0, 0.30)';
+    
+  };
+
+  const mouseLeaveBorder = () => {
+    document.getElementById('search-form').style.boxShadow = '0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2)';
+  };
 
   return (
     <div className="App">
       <form
       className="search-form"
+      id="search-form"
       method="post"
+      onMouseEnter={mouseEnterBorder}
+      onMouseLeave={mouseLeaveBorder}
       onSubmit={handleSubmit}>
-        <div className="intro-title">
-          Is your sentence sarcastic? Lets find out
-        </div>
         <input
         className="search-input"
+        id='search-input'
         action=""
         type="text"
         placeholder="Search"
