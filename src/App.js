@@ -28,7 +28,6 @@ const App = () => {
   }, []);
 
   const handleSubmit = e => {
-    console.log('handleSubmit called')
     setSentence('')
     fetchDataPost()
     e.preventDefault();
@@ -41,6 +40,16 @@ const App = () => {
 
   const mouseLeaveBorder = () => {
     document.getElementById('search-form').style.boxShadow = '0.3rem 0.3rem 1.2rem rgba(0, 0, 0, 0.2)';
+  };
+
+  const removePlaceholder = () => {
+    document.getElementById('search-input').placeholder = '';
+    document.getElementById('search-form').style.border = 'solid rgba(0, 0, 0, 0.20)';
+  };
+
+  const addPlaceholder = () => {
+    document.getElementById('search-input').placeholder = 'Type your sentence here...';
+    document.getElementById('search-form').style.border = 'none';
   };
 
   return (
@@ -57,8 +66,10 @@ const App = () => {
         id='search-input'
         action=""
         type="text"
-        placeholder="Search"
+        placeholder="Type your sentence here..."
         name="nm"
+        onFocus={removePlaceholder}
+        onBlur={addPlaceholder}
         onChange={e => setSentence(e.target.value)}
         value={sentence}>
         </input>
