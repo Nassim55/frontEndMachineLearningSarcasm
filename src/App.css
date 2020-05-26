@@ -4,13 +4,14 @@
   background: #fff;
   color: #5a6674;
   font-size: 0.79rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .search-form {
   position: relative;
-  top: 45%;
   left: 50%;
   width: 80%;
   height: 6%;
@@ -20,25 +21,37 @@
   background: #fff;
   transition: all 0.3s ease;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
-  position: absolute;
-  top: 25%;
-  left: 13%;
+  position: relative;
+  left: 2.5em;
   font-size: 0.85rem;
   background: none;
   color: #5a6674;
-  width: 80%;
+  width: 85%;
   height: 55%;
   border: none;
   appearance: none;
   outline: none;
 }
+@media only screen and (min-width: 768px) {
+  .search-input {
+    left: 3em;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 2560px) {
+  .search-input {
+    left: 3em;
+    font-size: 3.5rem;
+  }
+}
 
 .search-button {
-  position: absolute;
-  top: 25%;
+  position: relative;
   left: 5%;
   height: 55%;
   width: 7%;
@@ -52,13 +65,23 @@
 
 .result {
   position: absolute;
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 1rem;
   top: 70%;
+  border: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #40798C;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 svg {
   width: 100%;
   height: 100%;
   fill: #5a6674;
+  border: none;
 }
